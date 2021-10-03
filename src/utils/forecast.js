@@ -10,7 +10,7 @@ const forecast = (address, callback) => {
             callback('Unable to find location', undefined)
         } else {
             const {temperature, feelslike, weather_icons} = body.current;
-            callback(undefined, `${body.current.weather_descriptions[0]}. It is currently ${temperature}C degress out. It is feels like ${feelslike}C degress out. Wind speed ${body.current.wind_speed}`, weather_icons[0]);
+            callback(undefined, `${body.current.weather_descriptions[0]}. It is currently ${temperature}C degress out. It is feels like ${feelslike}C degress out. The humidity is ${body.current.humidity}%`, weather_icons[0]);
                 
         }
     })
